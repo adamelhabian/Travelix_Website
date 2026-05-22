@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelix</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo-container">
+        <img src="./Images/TravelixLogo.png" alt="Logo" />
+        <h1 class="logo-tittle">Travelix</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="travel_recommendation.html" id="home">Home</a></li>
+        <li><a href="./AboutUs.html" id="aboutUs">About Us</a></li>
+        <li><a href="./ContactUs.html" id="contactUs">Contact Us</a></li>
+        <div class="search-container">
+          <li>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Enter a Distenation or Keyword "
+            />
+          </li>
+          <li><button id="btnSearch">Search</button></li>
+          <li><button id="btnReset">Reset</button></li>
+        </div>
+      </ul>
+    </nav>
+
+    <section class="home-section">
+      <!--Background photo-->
+      <img
+        src="./Images/TravelBackground.jpg"
+        alt="Background Image"
+        class="background-img"
+      />
+      <!--Background Overlay-->
+      <div class="Overlay"></div>
+
+      <!--Social media Icons-->
+      <div class="Social-sideBar">
+        <!-- Twitter / X -->
+        <a href="https://twitter.com" target="_blank" class="social-link">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://facebook.com" target="_blank" class="social-link">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com" target="_blank" class="social-link">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com" target="_blank" class="social-link">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+
+      <!--Main Content-->
+      <div class="main-content">
+        <h2 class="Main-title">
+          EXPLORE DREAM <br />
+          DESTINATION
+        </h2>
+
+        <p class="Main-description">
+          The Travel Recommendation App helps users explore popular travel
+          destinations through an interactive and user-friendly interface. It
+          allows users to search for beaches, temples, countries, or specific
+          country names to view related cities along with images and
+          descriptions.
+        </p>
+
+        <button class="book-button">Book Now</button>
+      </div>
+    </section>
+  </body>
+</html>
