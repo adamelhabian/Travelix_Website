@@ -11,7 +11,7 @@
         },
         {
           "name": "Melbourne, Australia",
-          "imageUrl": "/Images/japan.jpg.jpg",
+          "imageUrl": "./Images/japan.jpg",
           "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
         }
       ]
