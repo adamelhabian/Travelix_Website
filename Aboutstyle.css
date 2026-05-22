@@ -1,0 +1,343 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+#aboutusnavbar {
+  width: 100%;
+  height: 80px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  background: black;
+
+  z-index: 1000;
+}
+
+/* Logo */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-container img {
+  width: 45px;
+}
+
+.logo-tittle {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Nav Links */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #67d4ff;
+}
+
+/* ================= HERO SECTION ================= */
+
+.aboutus-section {
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+/* Background Image */
+
+.background-img {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* Dark Overlay */
+
+.aboutusOverlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* ================= SOCIAL SIDEBAR ================= */
+
+.aboutusSocial-sideBar {
+  position: absolute;
+
+  left: 20px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  z-index: 10;
+}
+
+.social-link {
+  color: white;
+  font-size: 26px;
+
+  transition: 0.3s;
+}
+
+.social-link:hover {
+  color: #67d4ff;
+  transform: scale(1.1);
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+
+  padding-top: 90px;
+  padding-left: 90px;
+  padding-right: 70px;
+
+  color: white;
+}
+
+/* ABOUT US TITLE */
+
+.aboutUs-title {
+  font-size: 70px;
+  font-weight: 900;
+
+  margin-bottom: 18px;
+
+  line-height: 1;
+}
+
+/* DESCRIPTION */
+
+.aboutUs-description,
+.main-content p {
+  font-size: 16px;
+  line-height: 1.5;
+
+  max-width: 1050px;
+}
+
+.main-content p {
+  margin-bottom: 6px;
+}
+
+/* DESCRIPTION BOX */
+
+.main-content::after {
+  content: "";
+
+  position: absolute;
+
+  top: 175px;
+  left: 95px;
+
+  width: 83%;
+  height: 145px;
+
+  background: rgba(40, 40, 40, 0.45);
+
+  z-index: -1;
+}
+
+/* ================= TEAM SECTION ================= */
+
+.team-section {
+  margin-top: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 50px;
+
+  background: rgba(40, 40, 40, 0.45);
+
+  padding: 25px;
+
+  width: 92%;
+}
+
+/* Team Title */
+
+.team-title {
+  font-size: 65px;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+/* Team Members */
+
+.team-members {
+  display: flex;
+  align-items: center;
+
+  gap: 50px;
+}
+
+/* Team Card */
+
+.team-card {
+  text-align: center;
+
+  width: 180px;
+}
+
+/* Icon */
+
+.team-icon {
+  font-size: 55px;
+
+  margin-bottom: 15px;
+}
+
+/* Member Name */
+
+.member-name {
+  font-size: 20px;
+
+  margin-bottom: 10px;
+}
+
+/* Member Description */
+
+.member-description {
+  font-size: 14px;
+
+  line-height: 1.4;
+
+  margin-bottom: 18px;
+}
+
+/* Role Button */
+
+.member-role {
+  border: none;
+
+  background: #0f5e9c;
+
+  color: white;
+
+  padding: 10px 24px;
+
+  border-radius: 20px;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.member-role:hover {
+  background: #1681d8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .team-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .team-members {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+
+  #aboutusnavbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .aboutUs-title {
+    font-size: 50px;
+  }
+
+  .team-title {
+    font-size: 50px;
+  }
+
+  .main-content {
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+
+  .main-content::after {
+    width: 85%;
+    height: 190px;
+  }
+
+  .team-members {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .team-card {
+    width: 100%;
+  }
+}

@@ -1,4 +1,4 @@
-/* ================= GLOBAL STYLE ================= */
+/* ================= GLOBAL ================= */
 
 * {
   margin: 0;
@@ -8,10 +8,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  overflow-x: hidden;
+  overflow: hidden; /* ❗ NO SCROLL */
+  height: 100vh;
 }
 
-/* ================= NAVBAR ================= */
+/* ================= NAVBAR (HOME STYLE MATCH) ================= */
 
 #navbar {
   width: 100%;
@@ -32,8 +33,6 @@ body {
   z-index: 1000;
 }
 
-/* Logo */
-
 .logo-container {
   display: flex;
   align-items: center;
@@ -52,23 +51,18 @@ body {
   font-style: italic;
 }
 
-/* Nav Links */
-
 .nav-links {
   display: flex;
   align-items: center;
   gap: 30px;
-
   list-style: none;
 }
 
 .nav-links a {
   text-decoration: none;
   color: white;
-
   font-size: 18px;
   font-weight: bold;
-
   transition: 0.3s;
 }
 
@@ -76,111 +70,36 @@ body {
   color: #00bcd4;
 }
 
-/* Search Area */
+/* ================= BACKGROUND ================= */
 
-.search-container {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-
-  background-color: white;
-
-  padding: 10px 15px;
-
-  border-radius: 30px;
-}
-
-#searchInput {
-  border: none;
-  outline: none;
-
-  font-size: 15px;
-  width: 250px;
-}
-
-#btnSearch,
-#btnReset {
-  padding: 10px 20px;
-
-  border: none;
-  border-radius: 20px;
-
-  cursor: pointer;
-
-  font-weight: bold;
-
-  transition: 0.3s;
-}
-
-#btnSearch {
-  background-color: #009688;
-  color: white;
-}
-
-#btnReset {
-  background-color: #009688;
-  color: white;
-}
-
-#btnSearch:hover,
-#btnReset:hover {
-  background-color: #00695c;
-}
-
-/* ================= HOME SECTION ================= */
-
-.home-section {
+.Contactus-section {
   position: relative;
-
   width: 100%;
   height: 100vh;
-
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;
 }
-
-/* Background Image */
 
 .background-img {
   position: absolute;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
-  top: 0;
-  left: 0;
-
   z-index: -2;
 }
 
-/* Overlay */
-
 .Overlay {
   position: absolute;
-
   width: 100%;
   height: 100%;
-
-  background-color: rgba(0, 0, 0, 0.45);
-
-  top: 0;
-  left: 0;
-
+  background: rgba(0, 0, 0, 0.45);
   z-index: -1;
 }
 
-/* ================= SOCIAL SIDEBAR ================= */
+/* ================= SOCIAL ICONS (FIXED X ICON) ================= */
 
 .Social-sideBar {
   position: absolute;
-
   left: 40px;
   top: 50%;
-
   transform: translateY(-50%);
 
   display: flex;
@@ -190,8 +109,7 @@ body {
 
 .social-link {
   color: white;
-  font-size: 25px;
-
+  font-size: 26px; /* FIXED visibility */
   transition: 0.3s;
 }
 
@@ -200,40 +118,81 @@ body {
   transform: scale(1.2);
 }
 
-/* ================= MAIN CONTENT ================= */
+/* ================= MAIN LAYOUT ================= */
 
-.main-content {
-  width: 650px;
+.contactus-content {
+  position: absolute;
+  left: 140px;
+  top: 50%;
+  transform: translateY(-50%);
 
-  margin-left: 140px;
-  padding-top: 0px;
-
+  width: 45%;
   color: white;
 }
 
 .Main-title {
-  font-size: 75px;
+  font-size: 70px;
   font-weight: bold;
-
   line-height: 1.1;
-
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.Main-description {
+.touchus {
   font-size: 18px;
-
   line-height: 1.8;
-
-  margin-bottom: 35px;
-
-  width: 85%;
+  width: 80%;
 }
 
-/* Book Button */
+/* ================= FORM RIGHT SIDE (NO SCROLL FIX) ================= */
 
-.book-button {
-  padding: 15px 35px;
+.form-container {
+  position: absolute;
+  right: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 30%;
+}
+
+form {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+
+  border-radius: 12px;
+
+  backdrop-filter: blur(8px);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: white;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #00bcd4;
+}
+
+/* ================= BUTTON ================= */
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
 
   border: none;
   border-radius: 8px;
@@ -241,15 +200,14 @@ body {
   background-color: #009688;
   color: white;
 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 
   cursor: pointer;
-
   transition: 0.3s;
 }
 
-.book-button:hover {
+.submit-btn:hover {
   background-color: #00695c;
   transform: scale(1.05);
 }
