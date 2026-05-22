@@ -112,11 +112,7 @@ body {
   transition: 0.3s;
 }
 
-#btnSearch {
-  background-color: #009688;
-  color: white;
-}
-
+#btnSearch,
 #btnReset {
   background-color: #009688;
   color: white;
@@ -131,24 +127,21 @@ body {
 
 .home-section {
   position: relative;
-
   width: 100%;
   height: 100vh;
 
-  overflow: hidden;
-
   display: flex;
   align-items: center;
+
+  overflow: hidden;
 }
 
 /* Background Image */
 
 .background-img {
   position: absolute;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 
   top: 0;
@@ -161,7 +154,6 @@ body {
 
 .Overlay {
   position: absolute;
-
   width: 100%;
   height: 100%;
 
@@ -177,15 +169,15 @@ body {
 
 .Social-sideBar {
   position: absolute;
-
   left: 40px;
   top: 50%;
-
   transform: translateY(-50%);
 
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  z-index: 100;
 }
 
 .social-link {
@@ -204,9 +196,7 @@ body {
 
 .main-content {
   width: 650px;
-
   margin-left: 140px;
-  padding-top: 0px;
 
   color: white;
 }
@@ -214,7 +204,6 @@ body {
 .Main-title {
   font-size: 75px;
   font-weight: bold;
-
   line-height: 1.1;
 
   margin-bottom: 30px;
@@ -222,15 +211,11 @@ body {
 
 .Main-description {
   font-size: 18px;
-
   line-height: 1.8;
 
   margin-bottom: 35px;
-
   width: 85%;
 }
-
-/* Book Button */
 
 .book-button {
   padding: 15px 35px;
@@ -252,4 +237,63 @@ body {
 .book-button:hover {
   background-color: #00695c;
   transform: scale(1.05);
+}
+
+/* ================= RESULTS (REPLACES MAIN CONTENT) ================= */
+
+.results-container {
+  width: 650px;
+  margin-left: 140px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+
+  color: white;
+}
+
+/* Result Card */
+
+.result-card {
+  background-color: rgba(0, 0, 0, 0.55);
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+
+  transition: 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image */
+
+.result-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Text */
+
+.result-card h3 {
+  font-size: 22px;
+  margin: 15px;
+  color: white;
+}
+
+.result-card p {
+  font-size: 16px;
+  margin: 0 15px 20px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ================= UTILITIES ================= */
+
+.hidden {
+  display: none;
 }
